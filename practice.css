@@ -1,0 +1,14 @@
+:root {}
+
+.char-warp {
+    text-align: center;
+}
+
+#char {
+    font-size: 30vh;
+}
+
+#error {
+    font-size: 10vh;
+    color: tomato;
+}

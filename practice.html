@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>easy type practice jpKana</title>
+    <link rel="stylesheet" href="./practice.css" type="text/css">
+    <script type="text/javascript" src="./practice.js"></script>
+</head>
+
+<body>
+    <!-- Show The Kana -->
+    <div class="char-warp">
+        <div id="char"></div>
+        <div id="error"></div>
+    </div>
+
+
+    <script>
+        // init
+        // Load selected lines (practiceCollection)
+        var practiceCollection = createPracticeCollection(GetRequest());
+        // Load char to show now (nowChar)
+        var nowChar = chooseCharRandomly(practiceCollection);
+        // Show nowChar
+        document.getElementById("char").innerHTML = nowChar.theChar;
+
+        // Key event（HotLoop）
+        document.onkeydown = function(e) {
+            // console.log(e.key);
+            if (isCorrect(nowChar, e.key)) {
+                // Correct type
+                // console.log('true input');
+                // Chooes another nowChar
+                nowChar = chooseCharRandomly(practiceCollection);
+                // Show nowchar
+                document.getElementById("char").innerHTML = nowChar.theChar;
+                // hide cross (X)
+                document.getElementById("error").innerHTML = "";
+            } else {
+                // Show cross (X)
+                document.getElementById("error").innerHTML = "X";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

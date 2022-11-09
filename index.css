@@ -1,0 +1,65 @@
+:root {}
+
+#title {
+    margin: 0 auto;
+    width: 70vw;
+}
+
+
+/* "softKeybord" div */
+
+#softKeybord {
+    --tableWidth: 70vw;
+    --tableHeigth: calc(var(--tableWidth) / var(--hwratio));
+    --hwratio: 4;
+    --maxItemNumInALine: 14;
+    --trNum: 4;
+    --trHeight: calc(var(--tableHeigth) / var(--trNum));
+    --tdWidth: calc(var(--tableWidth) / var(--maxItemNumInALine));
+    text-align: center;
+}
+
+
+/* The whole table */
+
+#softKeybord table {
+    margin: 0 auto;
+    height: var(--tableHeigth);
+    width: var(--tableWidth);
+    background-color: wheat;
+    border: solid 1px gray;
+    font-size: larger;
+    text-align: center;
+}
+
+
+/* tabel header (th) */
+
+#softKeybord table .th {
+    font-size: 10pt;
+}
+
+
+/* tabel row (tr) */
+
+#softKeybord table tr {
+    height: var(--trHeight);
+    line-height: var(--trHeight);
+    border: solid 1px gray;
+}
+
+
+/* each tabel cell */
+
+#softKeybord table td {
+    width: var(--tdWidth);
+    border: solid 1px gray;
+}
+
+
+/* Start Button */
+
+#softKeybord .btn {
+    margin: 20px 0;
+    padding: 10px;
+}

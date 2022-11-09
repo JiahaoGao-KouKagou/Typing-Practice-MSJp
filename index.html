@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MS Japanese Practice</title>
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <script type="text/javascript" src="./index.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        <h3>Typing Practice (MS Japanese)</h3>
+        <p style="margin: 0 auto;">This is a typing practice webpage for MS Japanese input method.
+            <br> Please selet lines to practice and start.
+            <p>
+    </div>
+
+    <!-- Show key map. Choose lines to practice -->
+    <!-- Detail: Choose checkboxes followed each line, then click Start button to submit, this will send a "get" request -->
+    <!-- PS. There's no service, only a JS file. And the get request is used to carry the line index to ./practice.js. -->
+    <div id="softKeybord">
+        <form action="./practice.html" name="selectLine" method="get">
+            <table id="table-upper">
+                <tr class="th">
+                    <td colspan="13">Keys</td>
+                    <td colspan="1">Select</td>
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>-_</td>
+                    <td>=+</td>
+                    <td><input type="checkbox" name='line1'></td>
+                </tr>
+                <tr>
+                    <td>Q</td>
+                    <td>W</td>
+                    <td>E</td>
+                    <td>R</td>
+                    <td>T</td>
+                    <td>Y</td>
+                    <td>U</td>
+                    <td>I</td>
+                    <td>O</td>
+                    <td>P</td>
+                    <td>[{</td>
+                    <td>]}</td>
+                    <td>\|</td>
+                    <td><input type="checkbox" name='lineQ'></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>A</td>
+                    <td>S</td>
+                    <td>D</td>
+                    <td>F</td>
+                    <td>G</td>
+                    <td>H</td>
+                    <td>J</td>
+                    <td>K</td>
+                    <td>L</td>
+                    <td>;:</td>
+                    <td>'"</td>
+                    <td></td>
+                    <td><input type="checkbox" name='lineA'></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Z</td>
+                    <td>X</td>
+                    <td>C</td>
+                    <td>V</td>
+                    <td>B</td>
+                    <td>N</td>
+                    <td>M</td>
+                    <td>,&lt;</td>
+                    <td>.&gt;</td>
+                    <td>/?</td>
+                    <td></td>
+                    <td><input type="checkbox" name='lineZ'></td>
+                </tr>
+            </table>
+
+            <!-- Start Button -->
+            <input class="btn" type="submit" value="Start">
+        </form>
+
+        <table id="table-lower">
+            <tr class="th">
+                <td colspan="14">Key Map (Kana)</td>
+            </tr>
+            <tr>
+                <td>ろ</td>
+                <td>ぬ</td>
+                <td>ふ</td>
+                <td>あ</td>
+                <td>う</td>
+                <td>え</td>
+                <td>お</td>
+                <td>や</td>
+                <td>ゆ</td>
+                <td>よ</td>
+                <td>わを</td>
+                <td>ほ</td>
+                <td>へ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>た</td>
+                <td>て</td>
+                <td>い</td>
+                <td>す</td>
+                <td>か</td>
+                <td>ん</td>
+                <td>な</td>
+                <td>に</td>
+                <td>ら</td>
+                <td>せ</td>
+                <td>゛「</td>
+                <td>゜」</td>
+                <td>む</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ち</td>
+                <td>と</td>
+                <td>し</td>
+                <td>は</td>
+                <td>き</td>
+                <td>く</td>
+                <td>ま</td>
+                <td>の</td>
+                <td>り</td>
+                <td>れ</td>
+                <td>け</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>つ</td>
+                <td>さ</td>
+                <td>そ</td>
+                <td>ひ</td>
+                <td>こ</td>
+                <td>み</td>
+                <td>も</td>
+                <td>ね、</td>
+                <td>る。</td>
+                <td>め・</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
